@@ -173,8 +173,7 @@ function update ()
     
             // ---------------- Pad controls ---------------- 
     
-    if (padConnected)
-    {
+if (padConnected){
         if (paddle.left)
     {
         player.setVelocityX(-330);
@@ -187,37 +186,23 @@ function update ()
 
         player.anims.play('right', true);
     }
-    else
-    {
+    else{
         player.setVelocityX(0);
 
         player.anims.play('turn');
     }
-    if (paddle.up.isDown)
-    {
+    if (paddle.up){
         player.setVelocityY(-330);
-    }
-    if (paddle.up.isUp && cursors.down.isUp)
-    {
-        player.setVelocityY(0);
-    }
-    
-    if (paddle.down.isDown)
-    {
+    }    
+    if (paddle.down){
         player.setVelocityY(330);
     }
-    if (paddle.up.isDown)
-    {
+    if (paddle.up){
         player.setVelocityY(-330);
     }
-    if (paddle.up.isUp && cursors.down.isUp)
-    {
-        player.setVelocityY(0);
-    }
-    
-    if (paddle.down.isDown)
-    {
+    if (paddle.down){
         player.setVelocityY(330);
+    }
     }
 
 }
