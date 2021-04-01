@@ -65,9 +65,7 @@ function create ()
     const tileset = map.addTilesetImage('dune_algue','tuile');
     const plateforme = map.createStaticLayer ('Plateforme',tileset,0,0);
     plateforme.setCollisionByExclusion(-1,true);   
-    this.image.create
-
-    // ---------------- Frog ---------------- 
+        // ---------------- Frog ---------------- 
     player = this.physics.add.sprite(100, 450, 'Frog').setFlipX(true);
 
     //  ----------------  Frog animations ---------------- 
@@ -179,13 +177,13 @@ function update ()
     {
         if (paddle.left)
     {
-        player.setVelocityX(-260);
+        player.setVelocityX(-330);
 
         player.anims.play('left', true);
     }
     else if (paddle.right)
     {
-        player.setVelocityX(260);
+        player.setVelocityX(330);
 
         player.anims.play('right', true);
     }
@@ -208,10 +206,6 @@ function update ()
     {
         player.setVelocityY(330);
     }
-    if (paddle.A)
-    {
-        player.setVelocityY(-130);
-    }
     if (paddle.up.isDown)
     {
         player.setVelocityY(-330);
@@ -224,7 +218,6 @@ function update ()
     if (paddle.down.isDown)
     {
         player.setVelocityY(330);
-    }
     }
 
 }
